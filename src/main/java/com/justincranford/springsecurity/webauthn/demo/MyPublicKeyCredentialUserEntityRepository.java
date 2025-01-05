@@ -24,9 +24,9 @@ public class MyPublicKeyCredentialUserEntityRepository extends MapPublicKeyCrede
     public PublicKeyCredentialUserEntity findByUsername(final String username) {
         final PublicKeyCredentialUserEntity userEntity = super.findByUsername(username);
         if (userEntity == null) {
-            log.info("findByUsername failed, id: {}", username);
+            log.info("findByUsername failed, username: {}", username);
         } else {
-            log.info("findByUsername succeeded, id: {}, name: {}, displayName: {}", username, userEntity.getId(), userEntity.getDisplayName());
+            log.info("findByUsername succeeded, username: {}, name: {}, displayName: {}", username, userEntity.getId(), userEntity.getDisplayName());
         }
         return userEntity;
     }
